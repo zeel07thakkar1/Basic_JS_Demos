@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Table</title>
+	<link rel="stylesheet" href="">
+	<style>
+		table,td,tr
+		{
+			border: 1px solid black;
+		}
+		table tr:nth-child(even) td:nth-child(even)
+		{
+			background: red;
+		}
+		table tr:nth-child(even) td:nth-child(even)
+		{
+			background: red;
+		}
+		
+	</style>
+</head>
+<body>
+	<label for="row">Enter Rows:<input type="text" id="row"/></label><br><br>
+	<label for="col">Enter Columns:<input type="text" id="col"/></label><br><br>
+	
+	<table id="mytab"> </table>
+	<br><br>
+	<button type="button" onclick="table_fun()">Create Table</button><br><br>
+
+	<script>
+function table_fun () 
+{
+
+	var col1= Number(document.getElementById('col').value);//get data from textbox(input)
+	var row1= Number(document.getElementById('row').value);
+	
+	for(i=0; i<row1; i++)
+	{
+		var x=document.getElementById('mytab').insertRow(i); //insert row in table.
+		
+		for(j=0; j<col1; j++)
+		{
+
+			var y=x.insertCell(j); //insert cell in particular row.
+			y.innerHTML="cell";
+			y.setAttribute("id","tab_cell");
+			
+			
+			
+		
+		}
+	}
+}
+
+</script>
+</body>
+</html>

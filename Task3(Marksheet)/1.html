@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Marksheet</title>
+	<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+	
+	<div class="marksheet">
+		
+			<h2>MarkSheet</h2>
+			
+			<label for="class" style="text-align: justify">Year : 5th Year</label><br>
+			<label for="stream">Stream : M.Sc(IT&CA)</label><br>
+			<hr>
+
+			<label>Cryptography : <input type="text" id="crypto"></label><br><br>
+			<label>Data Structure : <input type="text" id="ds"></label><br><br>
+			<label>Android : <input type="text" id="android"></label><br><br>
+			<label>Data Compression : <input type="text" id="dc"></label><br><br>
+			<label>Software Engineer : <input type="text" id="se"></label><br><br>
+
+			<button type="submit" value="submit" onclick="marksheet()">Insert Marks</button>
+			
+			<br><br>
+			
+
+	
+			<table width="100%">
+				<caption>Name : Zeel D. Thakkar</caption>
+				<thead>
+					<tr>
+						<th>Code</th>
+						<th>Subject</th>
+						<th>Total Marks</th>
+						<th>Obtained Marks</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>084</td>
+						<td>Cryptography</td>
+						<td>100</td>
+						<td id="sub1"></td>
+					</tr>
+					<tr>
+						<td>01</td>
+						<td>Data Structure</td>
+						<td>100</td>
+						<td id="sub2"></td>
+					</tr>
+					<tr>
+						<td>099</td>
+						<td>Android</td>
+						<td>100</td>
+						<td id="sub3"></td>
+					</tr>
+					<tr>
+						<td>058</td>
+						<td>Data Compression</td>
+						<td>100</td>
+						<td id="sub4"></td>
+					</tr>
+					<tr>
+						<td>033</td>
+						<td>Software Engineer</td>
+						<td>100</td>
+						<td id="sub5"></td>
+					</tr>
+					<tr>
+						<td colspan="3">TOTAL</td>
+						<td id="total"></td>
+					</tr>
+					<tr>
+						<td colspan="3">PERCENTAGE(%)</td>
+						<td id="per"></td>
+					</tr>
+					<tr>
+						<td colspan="3">GRADE</td>
+						<td id="grade"></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+		<script>
+
+
+			function marksheet (argument) {
+				
+				var sub_crypto=Number(document.getElementById('crypto').value);
+				document.getElementById('sub1').innerHTML=sub_crypto;
+
+
+				var sub_ds=Number(document.getElementById('ds').value);
+				document.getElementById('sub2').innerHTML=sub_ds;
+
+				var sub_android=Number(document.getElementById('android').value);
+				document.getElementById('sub3').innerHTML=sub_android;
+
+				var sub_dc=Number(document.getElementById('dc').value);
+				document.getElementById('sub4').innerHTML=sub_dc;
+
+				var sub_se=Number(document.getElementById('se').value);
+				document.getElementById('sub5').innerHTML=sub_se;
+
+				var total=sub_crypto+sub_ds+sub_android+sub_dc+sub_se;
+				document.getElementById('total').innerHTML=total;
+
+				var per=(total/5);
+				document.getElementById('per').innerHTML=per+"%";
+
+				if(per>=80)
+				{
+					document.getElementById('grade').innerHTML="A+";
+				}
+				else if (per>=50) 
+				{
+						document.getElementById('grade').innerHTML="B+";	
+				}
+				else 
+				{
+						document.getElementById('grade').innerHTML="C+";	
+				}		
+			}
+		</script>
+</body>
+</html>

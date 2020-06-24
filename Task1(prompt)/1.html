@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Prompt()</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<marquee id="demo"></marquee>
+
+	<button type="button" onclick="myfun()">Show prompt</button>
+
+<script>
+function myfun (argument) 
+{
+		// body...
+		var name=prompt("Please Enter Your Name: ");
+		var clr=prompt("please Enter Your Fevourite Color:");
+		if(name!=null)
+		{
+			document.getElementById('demo').innerHTML="Hello "+name+" How are You!!"; //set the text for html element
+			document.getElementById('demo').style.background = clr; //set the css style for html element.
+		}
+}
+</script>
+</body>
+</html>

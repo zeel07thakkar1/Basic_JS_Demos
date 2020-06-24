@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Form Validation</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		.u_reg_form
+		{
+			width: 700px;
+			height: auto;
+			margin: 0px auto;
+
+		}
+		table
+		{
+			border: 1px solid black;
+			border-collapse: collapse;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="u_reg_form">
+	<table width="100%">
+		<caption>User Registration</caption>
+		
+		
+		<tbody>
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" name="fname" id="first"></td>
+				<td id="form_fname"></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" name="lname" id="last"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>E-mail</td>
+				<td><input type="email" name="email" id="email_id"></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="pass" id="pass"></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td>Confirm password</td>
+				<td><input type="password" name="conf_pass" id="confirm_pass"></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="button" name="submit" value="Submit" onclick="validat_form()"></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+
+	function validat_form (argument) {
+			
+			var f=document.getElementById('first').value;
+			var l=document.getElementById('last').value;
+			if(f == "" )
+			{
+				document.getElementById('form_fname').innerHTML="Plzz Input First Name";
+			}
+			else
+			{
+				first_name=document.getElementById('form_fname').value;
+			}
+	}
+	
+</script>
+</body>
+</html>
